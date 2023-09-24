@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <script defer type="application/x-javascript" th:src="@{/resources/js/prova.bundle.js}"></script>
+</head>
+<body>
+<h1 th:text="'Product list (#' + ${#lists.size(users)} + ')'"></h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>username</th>
+        <th>password</th>
+    </tr>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.getId()}">Onions</td>
+        <td th:text="${user.getUsername()}">2.41</td>
+        <td th:text="${user.getPassword()} != null  ? 'YES' :'NO'">yes</td>
+    </tr>
+</table>
+
+<p>
+    <em th:text="${utente.getId()}"></em>
+    <em th:text="${utente.getUsername()}"></em>
+    <em th:text="${utente.getPassword()}"></em>
+</p>
+
+<h1 th:text="'Servlet Context list (#' + ${#lists.size(ls)} + ')'"></h1>
+<table>
+    <tr th:each="elem : ${ls}">
+        <td th:text="${elem}">element</td>
+    </tr>
+</table>
+<h1 th:text="'bufferedReader list (#' + ${#lists.size(ls2)} + ')'"></h1>
+<table>
+    <tr th:each="elem : ${ls2}">
+        <td th:text="${elem}">element</td>
+    </tr>
+</table>
+
+</body>
+</html>
