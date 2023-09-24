@@ -3,7 +3,29 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
-  <persistence-unit name="default">
 
-  </persistence-unit>
+    <persistence-unit name="tisano-pu-jta" transaction-type="JTA">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>tisanoDB2</jta-data-source>
+        <non-jta-data-source>tisanoDB2Unmanaged</non-jta-data-source>
+        <class>org.francescobasile.tisano.User</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+        </properties>
+    </persistence-unit>
+
+    <!--    CONFIGURAZIONE CON DATASOURCE IN PROPERTIES E TRANSACTION NON JTA-->
+    <!--        <persistence-unit name="tisano-pu" transaction-type="RESOURCE_LOCAL">-->
+    <!--            <description>Default persistance unit per applicazione Tisano NON JTA</description>-->
+    <!--            <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
+    <!--            <class>org.francescobasile.tisano.User</class>-->
+    <!--            <exclude-unlisted-classes>true</exclude-unlisted-classes>-->
+    <!--            <properties>-->
+    <!--                <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>-->
+    <!--                <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tisano"/>-->
+    <!--                <property name="jakarta.persistence.jdbc.user" value="dbuser"/>-->
+    <!--                <property name="jakarta.persistence.jdbc.password" value="0picasso!"/>-->
+    <!--            </properties>-->
+    <!--        </persistence-unit>-->
 </persistence>
