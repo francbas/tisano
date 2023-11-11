@@ -1,4 +1,4 @@
-package org.francescobasile.tisano;
+package org.francescobasile.tisano.entity;
 
 import jakarta.ejb.Stateful;
 import jakarta.persistence.Entity;
@@ -8,9 +8,9 @@ import jakarta.persistence.Id;
 
 @Stateful
 @Entity
-public class User {
+public class User{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String username;
     String password;

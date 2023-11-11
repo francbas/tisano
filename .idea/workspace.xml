@@ -9,18 +9,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e03bd2-b6b9-4fbe-99cf-a560d71a3557" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/nx-console.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="08e03bd2-b6b9-4fbe-99cf-a560d71a3557" name="Changes" comment="project config dependency">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/controller/WebEndPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/entity/AbstractEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/entity/Medico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/entity/Specializzazione.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/entity/TimeSlot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/entity/repository/MedicoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/entity/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/LocalEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/AbstractComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/AbstractContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/Composite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/IContainable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/IProcessable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/ZTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/hibernate/Association.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/hibernate/Persistenza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/hibernate/TreeStructureTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/observer/EventManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/observer/EventSchema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/observer/IEventManger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/observer/PublishManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/observer/Publishable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/observer/Publisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/observer/SchemaQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/observer/Subscribable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/observer/Subscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/observer/Triggable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/socket/ChatBotEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/socket/ChatBoxEndPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/socket/EchoEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/socket/WebSocketClientEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/utils/PropertyUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestMapEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/observer/MedicoStub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/observer/TestOberverPattern.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webpack-tisano/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/webpack-tisano/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/IComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/IComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/ICompositeContent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/Medico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/ResourceComposite.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/ResourceLeaf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/ReturnType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/Specializzazione.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/TimeSlot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite/ZTestComposite.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite2/IComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/francescobasile/tisano/prove/composite2/ICompositeContent.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +71,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "francbas"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ff57d8d2-fcff-409a-a2a2-0ca182cd9d47" />
+        <option name="url" value="https://github.com/francbas/tisano.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -82,9 +138,9 @@
 }]]></component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn clean" />
       <command value="mvn install" />
       <command value="mvn compile" />
+      <command value="mvn clean" />
     </option>
   </component>
   <component name="RunManager">
@@ -105,7 +161,7 @@
       <deployment>
         <artifact name="tisano:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/tisano-1.0-SNAPSHOT" />
+            <option name="CONTEXT_PATH" value="/tisano" />
           </settings>
         </artifact>
       </deployment>
@@ -198,8 +254,17 @@
       <updated>1695591288228</updated>
       <workItem from="1695591289217" duration="40000" />
       <workItem from="1699725851667" duration="53000" />
-      <workItem from="1699725908694" duration="4472000" />
+      <workItem from="1699725908694" duration="5756000" />
     </task>
+    <task id="LOCAL-00001" summary="project config dependency">
+      <option name="closed" value="true" />
+      <created>1699741927204</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699741927205</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +272,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="project config dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="project config dependency" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

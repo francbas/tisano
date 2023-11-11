@@ -1,11 +1,14 @@
 package org.francescobasile.tisano;
 
+import org.francescobasile.tisano.entity.User;
+import org.francescobasile.tisano.entity.repository.UserRepository;
+
 import java.util.List;
 
 public class UserService implements EntityService<User> {
 
     //    @Inject
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public UserService() {
         super();
@@ -28,7 +31,7 @@ public class UserService implements EntityService<User> {
     }
 
     @Override
-    public <P> Boolean update(User entity) {
+    public Boolean update(User entity) {
         return false;
     }
 

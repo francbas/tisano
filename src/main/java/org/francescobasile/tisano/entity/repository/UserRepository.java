@@ -1,7 +1,9 @@
-package org.francescobasile.tisano;
+package org.francescobasile.tisano.entity.repository;
 
 import jakarta.ejb.Stateless;
 import jakarta.persistence.Query;
+import org.francescobasile.tisano.AbstractEntityRepository;
+import org.francescobasile.tisano.entity.User;
 
 import java.util.List;
 

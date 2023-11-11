@@ -8,6 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.francescobasile.tisano.entity.User;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
 import org.thymeleaf.web.IWebExchange;
@@ -17,8 +18,10 @@ import org.thymeleaf.web.servlet.JakartaServletWebApplication;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Writer;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 @WebServlet(
         name = "UserController",
@@ -36,8 +39,8 @@ public class UserController extends HttpServlet {
     JakartaServletWebApplication application;
     TemplateEngine templateEngine;
 
-    @Inject
-    User utente;//TODO: cancellare questa prova di injection
+//    @Inject
+//    User utente;//TODO: cancellare questa prova di injection
 
     public void init(final FilterConfig filterConfig) {
 
@@ -51,7 +54,7 @@ public class UserController extends HttpServlet {
 
         this.application = JakartaServletWebApplication.buildApplication(request.getServletContext());
         this.templateEngine = TemplateEngineSetup.registraTemplateEngine(this.application);
-        UserService userService = new UserService();
+//        UserService userService = new UserService();
 
 //        bufferedReader.readLine(); // get chars from request buffered reader
 //        ServletInputStream inputStream = request.getInputStream();//get binary data from request stream
@@ -67,8 +70,6 @@ public class UserController extends HttpServlet {
         );
 
 
-
-
 //        getServletContext()
 //                .getRequestDispatcher(url)
 //                .forward(request, response);
@@ -77,12 +78,15 @@ public class UserController extends HttpServlet {
         final Writer writer = response.getWriter();
 //        final String path = webRequest.getPathWithinApplication();
 
+        User utente = new User();
         utente.setId(2);
-        utente.setUsername("ciccio");
-        utente.setPassword("segreto");
+        utente.setUsername("username01");
+        utente.setPassword("segreto01");
+        User utente2 = new User("username02", "password01");
 
         WebContext ctx = new WebContext(webExchange, webExchange.getLocale());
-        ctx.setVariable("users", userService.findAll());
+//        ctx.setVariable("users", userService.findAll());
+        ctx.setVariable("users", List.of(new User[]{utente, utente2}));
         ctx.setVariable("utente", utente);
         ctx.setVariable("ls", ls);
         ctx.setVariable("ls2", ls2);
