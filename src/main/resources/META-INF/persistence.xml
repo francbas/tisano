@@ -5,13 +5,19 @@
              version="3.0">
 
     <persistence-unit name="tisano-pu-jta" transaction-type="JTA">
-<!--        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <jta-data-source>tisanoDB2</jta-data-source>
         <non-jta-data-source>tisanoDB2Unmanaged</non-jta-data-source>
-        <class>org.francescobasile.tisano.User</class>
+        <class>org.francescobasile.tisano.entity.User</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+            <!-- Automatically export the schema -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <!-- Echo all executed SQL to console -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.highlight_sql" value="true"/>
         </properties>
     </persistence-unit>
 

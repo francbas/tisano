@@ -13,10 +13,12 @@
         <th>Id</th>
         <th>username</th>
         <th>password</th>
+        <th>password vuota</th>
     </tr>
     <tr th:each="user : ${users}">
         <td th:text="${user.getId()}">Onions</td>
         <td th:text="${user.getUsername()}">2.41</td>
+        <td th:text="${user.getPassword()}">yes</td>
         <td th:text="${user.getPassword()} != null  ? 'YES' :'NO'">yes</td>
     </tr>
 </table>

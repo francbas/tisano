@@ -12,9 +12,8 @@ public abstract class AbstractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Version
-    private LocalDateTime version;
+    private LocalDateTime lastUpdate;
 
     public void setId(Long id) {
         this.id = id;
@@ -24,11 +23,11 @@ public abstract class AbstractEntity {
         return id;
     }
 
-    public LocalDateTime getVersion() {
-        return version;
+    public LocalDateTime getLastUpdate() {
+        return lastUpdate;
     }
 
-    public void setVersion(LocalDateTime version) {
-        this.version = version;
+    public void setLastUpdate(LocalDateTime version) {
+        this.lastUpdate = version;
     }
 }

@@ -54,7 +54,7 @@ public class UserController extends HttpServlet {
 
         this.application = JakartaServletWebApplication.buildApplication(request.getServletContext());
         this.templateEngine = TemplateEngineSetup.registraTemplateEngine(this.application);
-//        UserService userService = new UserService();
+        UserService userService = new UserService();
 
 //        bufferedReader.readLine(); // get chars from request buffered reader
 //        ServletInputStream inputStream = request.getInputStream();//get binary data from request stream
@@ -79,14 +79,14 @@ public class UserController extends HttpServlet {
 //        final String path = webRequest.getPathWithinApplication();
 
         User utente = new User();
-        utente.setId(2);
+        utente.setId(2L);
         utente.setUsername("username01");
         utente.setPassword("segreto01");
         User utente2 = new User("username02", "password01");
 
         WebContext ctx = new WebContext(webExchange, webExchange.getLocale());
-//        ctx.setVariable("users", userService.findAll());
-        ctx.setVariable("users", List.of(new User[]{utente, utente2}));
+        ctx.setVariable("users", userService.findAll());
+//        ctx.setVariable("users", List.of(new User[]{utente, utente2}));
         ctx.setVariable("utente", utente);
         ctx.setVariable("ls", ls);
         ctx.setVariable("ls2", ls2);

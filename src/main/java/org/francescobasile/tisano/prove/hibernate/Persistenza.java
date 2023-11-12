@@ -6,7 +6,6 @@ import org.francescobasile.tisano.prove.LocalEntityRepository;
 import org.hibernate.annotations.DiscriminatorFormula;
 import org.hibernate.annotations.NaturalId;
 
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Persistenza {
@@ -47,8 +46,8 @@ public class Persistenza {
             System.out.printf("Persona: [id %d] %s (stipendio: %d)%nImpiegato: %s%n", impiegato1.getId(), impiegato1.getCognome(), 0, impiegato1 instanceof Impiegato);
         }
 
-        Animale cleo = new Gatto(new Tassonomia("felidae","felis","felis silvestris" ), "cleo");
-        Animale miki = new Gatto(new Tassonomia("felidae","felis","felis silvestris" ), "miki");
+        Animale cleo = new Gatto(new Tassonomia("felidae", "felis", "felis silvestris"), "cleo");
+        Animale miki = new Gatto(new Tassonomia("felidae", "felis", "felis silvestris"), "miki");
         LocalEntityRepository.save(cleo);
         LocalEntityRepository.save(miki);
 
@@ -114,7 +113,7 @@ class Impiegato extends Persona {
     @NotNull int stipendio;
 
     @Enumerated(EnumType.STRING)
-    DayOfWeek giornoLibero;
+    private static DayOfWeek giornoLibero;
 
     public int getStipendio() {
         return stipendio;
@@ -145,7 +144,7 @@ abstract class Animale {
     Tassonomia tassonomia;
 
     @Version
-    LocalDateTime lastUpdated;
+    Long version;
 
     public Animale() {
     }
